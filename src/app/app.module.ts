@@ -10,6 +10,7 @@ import {NavbarComponent} from './components/top-view/navbar/navbar.component';
 import { AttackViewComponent } from './components/attack-view/attack-view.component';
 import { AttributesComponent } from './components/attributes/attributes.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SettingsComponent } from './components/settings/settings.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     MatIconModule
   ],
   providers: [],
