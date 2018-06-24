@@ -4,8 +4,9 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {OverviewComponent} from './components/overview/overview.component';
-import {OverlayComponent} from './components/overlay/overlay.component';
-import { PlayerDisplayComponent } from './components/player-display/player-display.component';
+import {OverlayComponent} from './components/top-view/overlay/overlay.component';
+import { PlayerDisplayComponent } from './components/top-view/player-display/player-display.component';
+import { NavbarComponent } from './components/top-view/navbar/navbar.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PlayerDisplayComponent } from './components/player-display/player-displ
     AppComponent,
     OverviewComponent,
     OverlayComponent,
-    PlayerDisplayComponent
+    PlayerDisplayComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Player} from "../../interfaces/player";
+import {Player} from '../../../interfaces/player';
 
 @Component({
   selector: 'app-overlay',
@@ -9,7 +9,9 @@ import {Player} from "../../interfaces/player";
 export class OverlayComponent implements OnInit {
 
   @Input() player: Player = null;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
     console.log(this.player);
