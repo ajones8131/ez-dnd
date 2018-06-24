@@ -7,7 +7,9 @@ import {OverviewComponent} from './components/overview/overview.component';
 import {OverlayComponent} from './components/top-view/overlay/overlay.component';
 import {PlayerDisplayComponent} from './components/top-view/player-display/player-display.component';
 import {NavbarComponent} from './components/top-view/navbar/navbar.component';
-
+import { AttackViewComponent } from './components/attack-view/attack-view.component';
+import { AttributesComponent } from './components/attributes/attributes.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,10 @@ import {NavbarComponent} from './components/top-view/navbar/navbar.component';
     OverviewComponent,
     OverlayComponent,
     PlayerDisplayComponent,
-    NavbarComponent
+    NavbarComponent,
+    AttackViewComponent,
+    AttributesComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
