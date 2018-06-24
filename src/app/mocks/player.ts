@@ -1,6 +1,6 @@
 import {Player} from '../interfaces/player';
 
-const player: Player = {
+export const player: Player = {
   _name: 'BadKidRando',
   _playerName: 'Aaron',
   _level: 2,

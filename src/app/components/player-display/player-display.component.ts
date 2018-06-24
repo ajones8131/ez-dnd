@@ -2,17 +2,16 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Player} from "../../interfaces/player";
 
 @Component({
-  selector: 'app-overlay',
-  templateUrl: './overlay.component.html',
-  styleUrls: ['./overlay.component.css']
+  selector: 'app-player-display',
+  templateUrl: './player-display.component.html',
+  styleUrls: ['./player-display.component.css']
 })
-export class OverlayComponent implements OnInit {
+export class PlayerDisplayComponent implements OnInit {
 
   @Input() player: Player = null;
   constructor() { }
 
   ngOnInit() {
-    console.log(this.player);
   }
 
 }

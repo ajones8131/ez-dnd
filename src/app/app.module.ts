@@ -5,13 +5,15 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {OverviewComponent} from './components/overview/overview.component';
 import {OverlayComponent} from './components/overlay/overlay.component';
+import { PlayerDisplayComponent } from './components/player-display/player-display.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     OverviewComponent,
-    OverlayComponent
+    OverlayComponent,
+    PlayerDisplayComponent
   ],
   imports: [
     BrowserModule
