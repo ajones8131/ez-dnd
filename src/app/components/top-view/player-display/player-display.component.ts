@@ -9,7 +9,9 @@ import {Player} from '../../../interfaces/player';
 export class PlayerDisplayComponent implements OnInit {
 
   @Input() player: Player = null;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
