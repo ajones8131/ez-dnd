@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
+import {MatIconModule} from '@angular/material';
 
 import {AppComponent} from './app.component';
 import {OverviewComponent} from './components/overview/overview.component';
@@ -18,7 +18,8 @@ import {NavbarComponent} from './components/top-view/navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
