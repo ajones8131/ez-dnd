@@ -1,6 +1,6 @@
 export interface BaseStat {
-  name: string;
-  value: number;
-  modifier: number;
-  customModifier: number;
+  _name: string;
+  _value: number;
+  _modifier: number;
+  _customModifier: number;
 }

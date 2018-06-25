@@ -15,79 +15,79 @@ export interface Player {
   _passiveWisdom: number;
   _inspiration: number;
   _traits: {
-    personalityTraits: string[];
-    ideals: string[];
-    bonds: string[];
-    flaws: string[];
-    features: string[];
-    languages: string[];
-    proficiencies: string[];
+    _personalityTraits: string[];
+    _ideals: string[];
+    _bonds: string[];
+    _flaws: string[];
+    _features: string[];
+    _languages: string[];
+    _proficiencies: string[];
   }
   _equipment: {
-    primaryWeapon: Weapon;
-    secondaryWeapon: Weapon;
-    headgear: Armor;
-    chestplate: Armor;
-    gauntlets: Armor;
-    jewelry: Armor;
-    boots: Armor;
+    _primaryWeapon: Weapon;
+    _secondaryWeapon: Weapon;
+    _headgear: Armor;
+    _chestplate: Armor;
+    _gauntlets: Armor;
+    _jewelry: Armor;
+    _boots: Armor;
 
   }
 
   _attacks: {
-    meleeAtk: MeleeAttack[];
-    spellAtk: SpellAttack[];
+    _meleeAtk: MeleeAttack[];
+    _spellAtk: SpellAttack[];
   }
 
   _defense: {
-    armorClass: number;
-    maximumHitPoints: number;
-    currentHitPoints: number;
-    temporaryHitPoints: number;
+    _armorClass: number;
+    _maximumHitPoints: number;
+    _currentHitPoints: number;
+    _temporaryHitPoints: number;
   }
 
   _movement: {
-    speed: number;
-    initiative: number;
+    _speed: number;
+    _initiative: number;
   }
 
   _baseStats: {
-    proficiencyBonus: number;
-    str: BaseStat;
-    dex: BaseStat;
-    const: BaseStat;
-    int: BaseStat;
-    wis: BaseStat;
-    cha: BaseStat;
+    _proficiencyBonus: number;
+    _str: BaseStat;
+    _dex: BaseStat;
+    _const: BaseStat;
+    _int: BaseStat;
+    _wis: BaseStat;
+    _cha: BaseStat;
   }
 
   _savingThrows: {
-    str: StrStat;
-    dex: DexStat;
-    const: ConstStat;
-    int: IntStat;
-    wis: WisStat;
-    cha: ChaStat;
+    _str: StrStat;
+    _dex: DexStat;
+    _const: ConstStat;
+    _int: IntStat;
+    _wis: WisStat;
+    _cha: ChaStat;
   }
 
   _stats: {
-    Acrobatics: DexStat;
-    AnimalHandling: WisStat;
-    Arcana: IntStat;
-    Athletics: StrStat;
-    Deception: ChaStat;
-    History: IntStat;
-    Insight: WisStat;
-    Intimidation: ChaStat;
-    Investigation: IntStat;
-    Medicine: WisStat;
-    Nature: IntStat;
-    Perception: WisStat;
-    Performance: ChaStat;
-    Persuasion: ChaStat;
-    Religion: IntStat;
-    SleightOfHand: DexStat;
-    Stealth: DexStat;
-    Survival: WisStat;
+    _acrobatics: DexStat;
+    _animalHandling: WisStat;
+    _arcana: IntStat;
+    _athletics: StrStat;
+    _deception: ChaStat;
+    _history: IntStat;
+    _insight: WisStat;
+    _intimidation: ChaStat;
+    _investigation: IntStat;
+    _medicine: WisStat;
+    _nature: IntStat;
+    _perception: WisStat;
+    _performance: ChaStat;
+    _persuasion: ChaStat;
+    _religion: IntStat;
+    _sleightOfHand: DexStat;
+    _stealth: DexStat;
+    _survival: WisStat;
   }
 }

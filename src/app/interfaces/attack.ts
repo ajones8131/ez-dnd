@@ -1,9 +1,9 @@
 export interface Attack {
-  name: string;
-  attackBonus: number;
-  damageDie: string;
-  damageModifier: number;
-  damageType: string;
+  _name: string;
+  _attackBonus: number;
+  _damageDie: string;
+  _damageModifier: number;
+  _damageType: string;
 }
 
 export interface MeleeAttack extends Attack{

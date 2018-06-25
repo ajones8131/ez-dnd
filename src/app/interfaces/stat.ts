@@ -1,11 +1,11 @@
 import {BaseStat} from "./base-stat";
 
 export interface Stat {
-  name: string;
-  value: number;
-  proficiency: boolean;
-  customModifier: number;
-  baseStat: BaseStat;
+  _name: string;
+  _value: number;
+  _proficiency: boolean;
+  _customModifier: number;
+  _baseStat: BaseStat;
 }
 
 export interface StrStat extends Stat {}

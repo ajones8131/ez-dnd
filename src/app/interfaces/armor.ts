@@ -1,3 +1,3 @@
 export interface Armor {
-  name: string;
+  _name: string;
 }
