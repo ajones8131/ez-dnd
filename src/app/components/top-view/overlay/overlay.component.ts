@@ -1,20 +1,26 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, OnChanges} from '@angular/core';
 import {Player} from '../../../interfaces/player';
+import {DataService} from "../../../services/data.service";
 
 @Component({
   selector: 'app-overlay',
   templateUrl: './overlay.component.html',
   styleUrls: ['./overlay.component.css']
 })
-export class OverlayComponent implements OnInit {
+export class OverlayComponent implements OnInit, OnChanges {
 
   @Input() player: Player = null;
 
-  constructor() {
+  constructor(public DS: DataService) {
+
   }
 
   ngOnInit() {
-    console.log(this.player);
+
+  }
+
+  ngOnChanges() {
+    this.DS.setCharacter(this.player);
   }
 
 }
