@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-attack-view',
   templateUrl: './attack-view.component.html',
-  styleUrls: ['./attack-view.component.css']
+  styles: []
 })
 export class AttackViewComponent implements OnInit {
 

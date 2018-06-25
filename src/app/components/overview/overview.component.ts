@@ -5,7 +5,7 @@ import {Player} from "../../interfaces/player";
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
-  styleUrls: ['./overview.component.css']
+  styles: []
 })
 export class OverviewComponent implements OnInit, OnDestroy {
 

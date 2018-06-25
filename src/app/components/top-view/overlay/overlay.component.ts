@@ -5,7 +5,7 @@ import {DataService} from "../../../services/data.service";
 @Component({
   selector: 'app-overlay',
   templateUrl: './overlay.component.html',
-  styleUrls: ['./overlay.component.css']
+  styles: []
 })
 export class OverlayComponent implements OnInit, OnChanges {
 

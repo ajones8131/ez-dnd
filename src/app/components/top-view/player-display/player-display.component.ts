@@ -4,7 +4,7 @@ import {Player} from '../../../interfaces/player';
 @Component({
   selector: 'app-player-display',
   templateUrl: './player-display.component.html',
-  styleUrls: ['./player-display.component.css']
+  styles: []
 })
 export class PlayerDisplayComponent implements OnInit {
 
