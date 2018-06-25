@@ -11,6 +11,7 @@ import { AttackViewComponent } from './components/attack-view/attack-view.compon
 import { AttributesComponent } from './components/attributes/attributes.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import {AppRoutingModule} from "./app-routing.module";
+import {DataService} from "./services/data.service";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import {AppRoutingModule} from "./app-routing.module";
     AppRoutingModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
