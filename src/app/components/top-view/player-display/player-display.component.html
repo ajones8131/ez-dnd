@@ -1,8 +1,8 @@
-<div>
-  <div>Name: {{player._name}}</div>
-  <div>Player: {{player._playerName}}</div>
-  <div>Class: {{player._class}} {{player._level}}</div>
-  <div>Race: {{player._race}}</div>
-  <div>Background: {{player._background}}</div>
-  <div>Alignment: {{player._alignment}}</div>
+<div *ngIf="!!character">
+  <div>Name: {{character._name}}</div>
+  <div>Player: {{character._playerName}}</div>
+  <div>Class: {{character._class}} {{character._level}}</div>
+  <div>Race: {{character._race}}</div>
+  <div>Background: {{character._background}}</div>
+  <div>Alignment: {{character._alignment}}</div>
 </div>

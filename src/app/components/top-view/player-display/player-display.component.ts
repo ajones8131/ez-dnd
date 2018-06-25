@@ -1,19 +1,27 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Player} from '../../../interfaces/player';
+import {DataService} from "../../../services/data.service";
 
 @Component({
   selector: 'app-player-display',
   templateUrl: './player-display.component.html',
   styleUrls: ['./player-display.component.css']
 })
-export class PlayerDisplayComponent implements OnInit {
+export class PlayerDisplayComponent implements OnInit, OnDestroy {
 
-  @Input() player: Player = null;
+  public character: Player = null;
 
-  constructor() {
+  constructor(public DS: DataService) {
+    DS.character.subscribe(character => {
+      this.character = character;
+    });
   }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy() {
+    this.DS.character.unsubscribe();
   }
 
 }
