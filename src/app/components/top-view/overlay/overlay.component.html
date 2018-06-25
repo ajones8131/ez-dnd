@@ -1,11 +1,13 @@
-<div>
-  <app-navbar></app-navbar>
-</div>
+<div class="w-100">
+  <div>
+    <app-navbar></app-navbar>
+  </div>
 
-<div class="w-20 fl bg-moon-gray">
-  <app-player-display [player]="player"></app-player-display>
-</div>
+  <div class="w-15 top-0 v-top fl bg-moon-gray">
+    <app-player-display [player]="player"></app-player-display>
+  </div>
 
-<div class="w-80 fl bg-orange">
-  <router-outlet></router-outlet>
+  <div class="w-85 top-0 v-top fr bg-orange">
+    <router-outlet></router-outlet>
+  </div>
 </div>
