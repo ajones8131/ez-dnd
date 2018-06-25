@@ -16,11 +16,11 @@ export class DataService {
   }
 
   public getJSON(): Observable<any> {
-    return this.http.get('assets/character.json');
+    return this.http.get('assets/saves/character.json');
   }
 
   public postJSON(newCharacter:Player) {
-    this.http.post('assets/character.json', newCharacter);
+    this.http.post('assets/saves/character.json', newCharacter);
   }
 
   public setCharacter(character) {
