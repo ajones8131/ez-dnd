@@ -1,17 +1,18 @@
-import { Injectable } from '@angular/core';
-import {Player} from "../interfaces/player";
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
-import {Subject} from "rxjs/Subject";
-import {Observable} from "rxjs/Observable";
-import {HttpClient} from "@angular/common/http";
+import {Injectable} from '@angular/core';
+import {Character} from '../interfaces/character';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {Subject} from 'rxjs/Subject';
+import {Observable} from 'rxjs/Observable';
+import {HttpClient} from '@angular/common/http';
+import {CharacterImpl} from '../classes/character-impl';
 
 @Injectable()
 export class DataService {
-  public character: Subject<Player> = new BehaviorSubject<Player>(null);
+  public character: Subject<CharacterImpl> = new BehaviorSubject<CharacterImpl>(null);
 
   constructor(private http: HttpClient) {
     this.getJSON().subscribe(data => {
-      this.character.next(data);
+      this.character.next(new CharacterImpl(data));
     });
   }
 
@@ -19,11 +20,11 @@ export class DataService {
     return this.http.get('assets/saves/character.json');
   }
 
-  public postJSON(newCharacter:Player) {
-    this.http.post('assets/saves/character.json', newCharacter);
+  public postJSON(newCharacter: Character) {
+    this.http.post('/Users/aaronjones/_source/temp/character.json', newCharacter);
   }
 
-  public setCharacter(character) {
-    this.character.next(character);
+  public setCharacter(characterImpl) {
+    this.character.next(characterImpl);
   }
 }

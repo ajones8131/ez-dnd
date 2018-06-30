@@ -1,3 +1,4 @@
-export interface Weapon {
-  _name: string;
+import {Item} from './item';
+
+export interface Weapon extends Item {
 }

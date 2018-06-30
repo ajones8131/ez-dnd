@@ -8,7 +8,8 @@ function createWindow () {
     width: 1024,
     height: 800,
     backgroundColor: '#ffffff',
-    icon: `file://${__dirname}/dist/favicon.ico`
+    icon: `file://${__dirname}/dist/favicon.ico`,
+    titleBarStyle: 'hiddenInset'
   });
 
 

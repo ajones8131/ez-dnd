@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "ng build && electron .",
-    "electron-build": "ng build --prod && electron ."
+    "electron-build": "ng build --prod && electron .",
+    "electron-package": "ng build --prod && electron-packager . ezDND --platform=mas,win32 --arch=x64"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +31,6 @@
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19",
-    "electron": "^2.0.3",
     "tachyons": "^4.10.0"
   },
   "devDependencies": {
@@ -52,6 +52,8 @@
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "typescript": "~2.5.3",
+    "electron": "^2.0.3",
+    "electron-packager": "^12.1.0"
   }
 }

@@ -1,6 +1,6 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {Player} from '../../../interfaces/player';
-import {DataService} from "../../../services/data.service";
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {DataService} from '../../../services/data.service';
+import {CharacterImpl} from '../../../classes/character-impl';
 
 @Component({
   selector: 'app-player-display',
@@ -9,7 +9,7 @@ import {DataService} from "../../../services/data.service";
 })
 export class PlayerDisplayComponent implements OnInit, OnDestroy {
 
-  public character: Player = null;
+  public character: CharacterImpl = null;
 
   constructor(public DS: DataService) {
     DS.character.subscribe(character => {

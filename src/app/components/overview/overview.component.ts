@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {DataService} from "../../services/data.service";
-import {Player} from "../../interfaces/player";
+import {DataService} from '../../services/data.service';
+import {CharacterImpl} from '../../classes/character-impl';
 
 @Component({
   selector: 'app-overview',
@@ -9,7 +9,7 @@ import {Player} from "../../interfaces/player";
 })
 export class OverviewComponent implements OnInit, OnDestroy {
 
-  public character:Player = null;
+  public character: CharacterImpl = null;
 
   constructor(public DS: DataService) {
     this.DS.character.subscribe(character => {
@@ -25,6 +25,11 @@ export class OverviewComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.DS.character.unsubscribe();
+  }
+
+  onClick() {
+    this.character.character._level += 1;
+    this.DS.postJSON(this.character.character);
   }
 
 }
