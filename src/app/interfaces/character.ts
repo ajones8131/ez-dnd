@@ -23,15 +23,6 @@ export interface Character extends Metadata {
     _languages: Metadata[];
     _proficiencies: Metadata[];
   };
-  _equipment: {
-    _primaryWeapon: Weapon;
-    _secondaryWeapon: Weapon;
-    _headgear: Armor;
-    _chestplate: Armor;
-    _gauntlets: Armor;
-    _jewelry: Armor;
-    _boots: Armor;
-  };
 
   _items: Item[];
 
