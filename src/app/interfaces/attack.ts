@@ -1,5 +1,6 @@
-export interface Attack {
-  _name: string;
+import {Metadata} from './metadata';
+
+export interface Attack extends Metadata{
   _attackBonus: number;
   _damageDie: string;
   _damageModifier: number;
@@ -7,9 +8,9 @@ export interface Attack {
 }
 
 export interface MeleeAttack extends Attack{
-
+  _value: number;
 }
 
 export interface SpellAttack extends Attack {
-
+  _value: number;
 }

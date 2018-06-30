@@ -1,3 +1,5 @@
-export interface Armor {
-  _name: string;
+import {Item} from './item';
+
+export interface Armor extends Item {
+  _defense: number;
 }

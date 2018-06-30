@@ -1,4 +1,4 @@
-export interface Schema {
+export interface Metadata {
   _name: string;
   _displayName?: string;
   _description?: string;

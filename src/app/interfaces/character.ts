@@ -1,12 +1,12 @@
-import {Weapon} from "./weapon";
-import {Armor} from "./armor";
-import {BaseStat} from "./base-stat";
-import {ChaStat, ConstStat, DexStat, IntStat, Stat, StrStat, WisStat} from "./stat";
-import {MeleeAttack, SpellAttack} from "./attack";
+import {Weapon} from './weapon';
+import {Armor} from './armor';
+import {BaseStat} from './base-stat';
+import {ChaStat, ConstStat, DexStat, IntStat, Stat, StrStat, WisStat} from './stat';
+import {MeleeAttack, SpellAttack} from './attack';
+import {Metadata} from './metadata';
+import {Item} from './item';
 
-export interface Player {
-  _name: string;
-  _playerName: string;
+export interface Character extends Metadata {
   _level: number;
   _class: string;
   _race: string;
@@ -15,14 +15,14 @@ export interface Player {
   _passiveWisdom: number;
   _inspiration: number;
   _traits: {
-    _personalityTraits: string[];
-    _ideals: string[];
-    _bonds: string[];
-    _flaws: string[];
-    _features: string[];
-    _languages: string[];
-    _proficiencies: string[];
-  }
+    _personalityTraits: Metadata[];
+    _ideals: Metadata[];
+    _bonds: Metadata[];
+    _flaws: Metadata[];
+    _features: Metadata[];
+    _languages: Metadata[];
+    _proficiencies: Metadata[];
+  };
   _equipment: {
     _primaryWeapon: Weapon;
     _secondaryWeapon: Weapon;
@@ -31,25 +31,27 @@ export interface Player {
     _gauntlets: Armor;
     _jewelry: Armor;
     _boots: Armor;
+  };
 
-  }
+  _items: Item[];
 
   _attacks: {
     _meleeAtk: MeleeAttack[];
     _spellAtk: SpellAttack[];
-  }
+    _spellSlots: Metadata;
+  };
 
   _defense: {
     _armorClass: number;
     _maximumHitPoints: number;
     _currentHitPoints: number;
     _temporaryHitPoints: number;
-  }
+  };
 
   _movement: {
     _speed: number;
     _initiative: number;
-  }
+  };
 
   _baseStats: {
     _proficiencyBonus: number;
@@ -59,7 +61,7 @@ export interface Player {
     _int: BaseStat;
     _wis: BaseStat;
     _cha: BaseStat;
-  }
+  };
 
   _savingThrows: {
     _str: StrStat;
@@ -68,7 +70,7 @@ export interface Player {
     _int: IntStat;
     _wis: WisStat;
     _cha: ChaStat;
-  }
+  };
 
   _stats: {
     _acrobatics: DexStat;
@@ -89,5 +91,5 @@ export interface Player {
     _sleightOfHand: DexStat;
     _stealth: DexStat;
     _survival: WisStat;
-  }
+  };
 }

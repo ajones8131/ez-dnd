@@ -1,8 +1,8 @@
 <div *ngIf="!!character">
-  <div>Name: {{character._name}}</div>
-  <div>Player: {{character._playerName}}</div>
-  <div>Class: {{character._class}} {{character._level}}</div>
-  <div>Race: {{character._race}}</div>
-  <div>Background: {{character._background}}</div>
-  <div>Alignment: {{character._alignment}}</div>
+  <div>Name: {{character.character._displayName}}</div>
+  <div>Player: {{character.character._name}}</div>
+  <div>Class: {{character.character._class}} {{character.character._level}}</div>
+  <div>Race: {{character.character._race}}</div>
+  <div>Background: {{character.character._background}}</div>
+  <div>Alignment: {{character.character._alignment}}</div>
 </div>
