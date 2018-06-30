@@ -9,5 +9,26 @@
   width: 85%;
 }
 
-.classname {
+.bg-primary {
+  background: #303030;
+}
+
+.bg-secondary {
+  background: #424242;
+}
+
+.bg-detail {
+  background: #212121;
+}
+
+.text-primary {
+  color: rgba(100%, 100%, 100%, 1);
+}
+
+.text-secondary {
+  color: rgba(100%, 100%, 100%, .7);
+}
+
+.text-detail {
+  color: rgba(100%, 100%, 100%, .5);
 }

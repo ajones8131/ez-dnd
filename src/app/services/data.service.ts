@@ -17,7 +17,7 @@ export class DataService {
   }
 
   public getJSON(): Observable<any> {
-    return this.http.get('/Users/aaronjones/_source/temp/character.json');
+    return this.http.get('assets/saves/character.json');
   }
 
   public postJSON(newCharacter: Character) {
