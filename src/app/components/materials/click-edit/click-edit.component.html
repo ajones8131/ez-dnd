@@ -1,6 +1,9 @@
-<div class="tc bg-transparent text-primary">
+<div class="bg-transparent text-primary">
+  <div class="dib">
+    <ng-content></ng-content>
+  </div>
   <div #valueDiv contenteditable="true"
-       class="bb bw1 outline-transparent ph2"
+       class="bb bw1 outline-transparent ph2 dib"
        [ngClass]="{'b--white b': edit, 'b--transparent': !edit}"
        (focus)="onFocus()"
        (blur)="onBlur($event, valueDiv.innerText, false)"

@@ -13,16 +13,20 @@ html {
   width: 85%;
 }
 
-.bg-primary {
-  background: #303030;
+.bg-primary-dark {
+  background: #212121;
 }
 
-.bg-secondary {
+.bg-primary {
   background: #424242;
 }
 
-.bg-detail {
-  background: #212121;
+.bg-primary-light {
+  background: #616161;
+}
+
+.bg-primary-washed {
+  background: #757575;
 }
 
 .text-primary {

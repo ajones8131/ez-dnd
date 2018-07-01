@@ -1,0 +1,30 @@
+<div *ngIf="!!character">
+  <app-click-input class="ml4 w-100 f3 flex" [(value)]="character.character._displayName"></app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pv0" [(value)]="character.character._name"></app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pv0" [(value)]="character.character._class"></app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pv0" [(value)]="character.character._race"></app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pv0" [(value)]="character.character._background"></app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pv0" [(value)]="character.character._alignment"></app-click-input>
+
+  <app-click-input class="ml4 w-100 f3 flex pt3" [(value)]="character.character._defense._currentHitPoints">
+    HP
+  </app-click-input>
+  <app-click-input class="ml4 w-100 f3 flex pt2" [(value)]="character.character._attacks._spellSlots._value">
+    Spell Slots
+  </app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pt3" [(value)]="character.character._money._cp._value">
+    <app-click-input [(value)]="character.character._money._cp._name"></app-click-input>
+  </app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pt2" [(value)]="character.character._money._sp._value">
+    <app-click-input [(value)]="character.character._money._sp._name"></app-click-input>
+  </app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pt2" [(value)]="character.character._money._ep._value">
+    <app-click-input [(value)]="character.character._money._ep._name"></app-click-input>
+  </app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pt2" [(value)]="character.character._money._gp._value">
+    <app-click-input [(value)]="character.character._money._gp._name"></app-click-input>
+  </app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pt2" [(value)]="character.character._money._pp._value">
+    <app-click-input [(value)]="character.character._money._pp._name"></app-click-input>
+  </app-click-input>
+</div>

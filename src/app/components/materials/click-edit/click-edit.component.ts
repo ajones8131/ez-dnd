@@ -22,7 +22,7 @@ export class ClickEditComponent implements OnInit {
   }
 
   onBlur(event, newValue, enter) {
-    if ((enter && !this.multiline) || !enter)  {
+    if ((enter && !this.multiline) || !enter) {
       if (enter && !this.multiline) {
         event.preventDefault();
       }
@@ -37,5 +37,6 @@ export class ClickEditComponent implements OnInit {
 
   onFocus() {
     this.edit = true;
+    this.valueDiv.nativeElement.focus();
   }
 }
