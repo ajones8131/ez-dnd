@@ -15,9 +15,8 @@ import {DataService} from './services/data.service';
 import {HttpClientModule} from '@angular/common/http';
 import {ClickEditComponent} from './components/materials/click-edit/click-edit.component';
 import {FormsModule} from '@angular/forms';
-import { EnterDirective } from './directives/eventing/enter.directive';
-import { BaseStatsComponent } from './components/overlay/base-stats/base-stats.component';
-import { BaseStatComponent } from './components/overlay/base-stats/base-stat/base-stat.component';
+import {BaseStatsComponent} from './components/overlay/base-stats/base-stats.component';
+import {BaseStatComponent} from './components/overlay/base-stats/base-stat/base-stat.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { BaseStatComponent } from './components/overlay/base-stats/base-stat/bas
     AttributesComponent,
     SettingsComponent,
     ClickEditComponent,
-    EnterDirective,
     BaseStatsComponent,
     BaseStatComponent
   ],

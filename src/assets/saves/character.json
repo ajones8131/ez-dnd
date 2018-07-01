@@ -7,8 +7,8 @@
   "_alignment": "Left",
   "_background": "Hermit",
   "_race": "Orc",
-  "_inspiration": null,
-  "_passiveWisdom": null,
+  "_inspiration": 0,
+  "_passiveWisdom": 15,
   "_proficiencyBonus": 2,
   "_baseStats": {
     "_str": {
