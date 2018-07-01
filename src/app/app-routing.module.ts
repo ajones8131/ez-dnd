@@ -12,13 +12,18 @@ const routes: Routes = [
     component: OverviewComponent,
   },
   {
-    path: 'attack',
+    path: 'combat',
     component: AttackViewComponent,
   },
   {
-    path: 'attributes',
+    path: 'inventory',
     component: AttributesComponent,
-  }
+  },
+  {
+    path: 'misc',
+    component: AttributesComponent,
+  },
+  { path: '**',   redirectTo: '/home'}
 ];
 
 @NgModule({
