@@ -10,9 +10,12 @@ import {NavbarComponent} from './components/top-view/navbar/navbar.component';
 import {AttackViewComponent} from './components/attack-view/attack-view.component';
 import {AttributesComponent} from './components/attributes/attributes.component';
 import {SettingsComponent} from './components/settings/settings.component';
-import {AppRoutingModule} from "./app-routing.module";
-import {DataService} from "./services/data.service";
+import {AppRoutingModule} from './app-routing.module';
+import {DataService} from './services/data.service';
 import {HttpClientModule} from '@angular/common/http';
+import {ClickEditComponent} from './components/materials/click-edit/click-edit.component';
+import {FormsModule} from '@angular/forms';
+import { EnterDirective } from './directives/eventing/enter.directive';
 
 @NgModule({
   declarations: [
@@ -23,13 +26,16 @@ import {HttpClientModule} from '@angular/common/http';
     NavbarComponent,
     AttackViewComponent,
     AttributesComponent,
-    SettingsComponent
+    SettingsComponent,
+    ClickEditComponent,
+    EnterDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

@@ -1,0 +1,11 @@
+<div class="tc bg-transparent text-primary">
+  <div #valueDiv contenteditable="true"
+       class="bb bw1 outline-transparent"
+       [ngClass]="{'b--white b': edit, 'b--transparent': !edit}"
+       (focus)="onFocus()"
+       (blur)="onBlur(valueDiv.innerText)"
+       (keydown.enter)="onBlur(valueDiv.innerText)"
+        spellcheck="false">
+    {{value}}
+  </div>
+</div>
