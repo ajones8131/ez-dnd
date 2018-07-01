@@ -7,14 +7,90 @@
   "_alignment": "Left",
   "_background": "Hermit",
   "_race": "Orc",
-  "_inspiration": null,
-  "_passiveWisdom": null,
-  "_baseStats": null,
+  "_inspiration": 0,
+  "_passiveWisdom": 15,
+  "_proficiencyBonus": 2,
+  "_baseStats": {
+    "_str": {
+      "_name": "str",
+      "_value": 10,
+      "_modifier": 0,
+      "_customModifier": 0
+    },
+    "_dex": {
+      "_name": "dex",
+      "_value": 10,
+      "_modifier": 0,
+      "_customModifier": 0
+    },
+    "_const": {
+      "_name": "const",
+      "_value": 10,
+      "_modifier": 0,
+      "_customModifier": 0
+    },
+    "_int": {
+      "_name": "int",
+      "_value": 10,
+      "_modifier": 0,
+      "_customModifier": 0
+    },
+    "_wis": {
+      "_name": "wis",
+      "_value": 10,
+      "_modifier": 0,
+      "_customModifier": 0
+    },
+    "_cha": {
+      "_name": "cha",
+      "_value": 10,
+      "_modifier": 0,
+      "_customModifier": 0
+    }
+  },
   "_stats": null,
   "_savingThrows": null,
   "_items": [null],
-  "_attacks": null,
-  "_defense": null,
+  "_defense": {
+    "_armorClass": 15,
+    "_maximumHitPoints": 30,
+    "_currentHitPoints": 7,
+    "_temporaryHitPoints": 0
+  },
+  "_money": {
+    "_cp": {
+      "_name": "Copper",
+      "_value": 0,
+      "_description": "cp"
+    },
+    "_sp": {
+      "_name": "Silver",
+      "_value": 0,
+      "_description": "sp"
+    },
+    "_ep": {
+      "_name": "Electrum",
+      "_value": 0,
+      "_description": "ep"
+    },
+    "_gp": {
+      "_name": "Gold",
+      "_value": 0,
+      "_description": "gp"
+    },
+    "_pp": {
+      "_name": "Platinum",
+      "_value": 0,
+      "_description": "pp"
+    }
+  },
+  "_attacks": {
+    "_spellSlots": {
+      "_name": "Spell Slots",
+      "_value": 0,
+      "_description": "Spell Slots Remaining"
+    }
+  },
   "_movement": null,
   "_traits": null
 }

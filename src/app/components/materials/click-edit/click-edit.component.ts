@@ -1,4 +1,4 @@
-import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, ViewChildren} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-click-input',
@@ -10,6 +10,7 @@ export class ClickEditComponent implements OnInit {
   @Output() valueChange = new EventEmitter();
   @Input() value = '';
   @Input() spellCheck = 'false';
+  @Input() multiline = false;
 
   @ViewChild('valueDiv') valueDiv: ElementRef;
   public edit = false;
@@ -20,15 +21,22 @@ export class ClickEditComponent implements OnInit {
   ngOnInit() {
   }
 
-  onBlur(newValue) {
-    if (newValue !== this.value) {
-      this.value = newValue;
-      this.valueChange.emit(this.value);
+  onBlur(event, newValue, enter) {
+    if ((enter && !this.multiline) || !enter) {
+      if (enter && !this.multiline) {
+        event.preventDefault();
+      }
+      if (newValue !== this.value) {
+        this.value = newValue;
+        this.valueChange.emit(this.value);
+      }
+      this.valueDiv.nativeElement.blur();
+      this.edit = false;
     }
-    this.edit = false;
   }
 
   onFocus() {
     this.edit = true;
+    this.valueDiv.nativeElement.focus();
   }
 }

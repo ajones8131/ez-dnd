@@ -1,7 +1,5 @@
-import {Weapon} from './weapon';
-import {Armor} from './armor';
 import {BaseStat} from './base-stat';
-import {ChaStat, ConstStat, DexStat, IntStat, Stat, StrStat, WisStat} from './stat';
+import {ChaStat, ConstStat, DexStat, IntStat, StrStat, WisStat} from './stat';
 import {MeleeAttack, SpellAttack} from './attack';
 import {Metadata} from './metadata';
 import {Item} from './item';
@@ -15,6 +13,7 @@ export interface Character extends Metadata {
   _alignment: string;
   _passiveWisdom: number;
   _inspiration: number;
+  _proficiencyBonus: number;
   _traits: {
     _personalityTraits: Metadata[];
     _ideals: Metadata[];
@@ -27,10 +26,18 @@ export interface Character extends Metadata {
 
   _items: Item[];
 
+  _money: {
+    _cp: Item;
+    _sp: Item;
+    _ep: Item;
+    _gp: Item;
+    _pp: Item;
+  };
+
   _attacks: {
     _meleeAtk: MeleeAttack[];
     _spellAtk: SpellAttack[];
-    _spellSlots: Metadata;
+    _spellSlots: Item;
   };
 
   _defense: {
@@ -46,7 +53,6 @@ export interface Character extends Metadata {
   };
 
   _baseStats: {
-    _proficiencyBonus: number;
     _str: BaseStat;
     _dex: BaseStat;
     _const: BaseStat;
