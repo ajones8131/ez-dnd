@@ -27,6 +27,13 @@ export interface Character extends Metadata {
 
   _items: Item[];
 
+  _money: {
+    _cp: Item;
+    _sp: Item;
+    _ep: Item;
+    _gp: Item;
+    _pp: Item;
+  }
   _attacks: {
     _meleeAtk: MeleeAttack[];
     _spellAtk: SpellAttack[];

@@ -74,4 +74,8 @@ export class CharacterImpl {
 
   }
 
+  updateMoney() {
+
+  }
+
 }
