@@ -7,6 +7,7 @@ import {Metadata} from './metadata';
 import {Item} from './item';
 
 export interface Character extends Metadata {
+  img: string;
   _level: number;
   _class: string;
   _race: string;

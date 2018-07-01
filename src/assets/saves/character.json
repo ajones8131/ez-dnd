@@ -1,5 +1,6 @@
 {
   "_name": "Aaron",
+  "img": null,
   "_displayName": "BadKidRando",
   "_level": 4,
   "_class": "lil Dick",
@@ -11,7 +12,7 @@
   "_baseStats": null,
   "_stats": null,
   "_savingThrows": null,
-  "_equipment": null,
+  "_items": [null],
   "_attacks": null,
   "_defense": null,
   "_movement": null,
