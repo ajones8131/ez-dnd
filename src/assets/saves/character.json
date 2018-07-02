@@ -48,7 +48,134 @@
       "_customModifier": 0
     }
   },
-  "_stats": null,
+  "_stats": {
+    "_acrobatics" : {
+      "_name": "Acrobatics",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_animalHandling" : {
+        "_name": "Animal Handling",
+        "_value": 0,
+        "_proficiency": false,
+        "_customModifier": 0,
+        "_baseStat": null
+    },
+    "_arcana" : {
+        "_name": "Arcana",
+        "_value": 0,
+        "_proficiency": false,
+        "_customModifier": 0,
+        "_baseStat": null
+    },
+    "_athletics" : {
+      "_name": "Athletics",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_deception" : {
+      "_name": "Deception",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_history" : {
+      "_name": "History",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+      "_insight" : {
+      "_name": "Insight",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_intimidation" : {
+      "_name": "Intimidation",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_investigation" : {
+      "_name": "Investigation",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_medicine" : {
+      "_name": "Medicine",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_nature" : {
+      "_name": "Nature",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_perception" : {
+      "_name": "Perception",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_performance" : {
+      "_name": "Performance",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_persuasion" : {
+      "_name": "Persuasion",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_religion" : {
+      "_name": "Religion",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_sleightOfHand" : {
+      "_name": "Sleight Of Hand",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_stealth" : {
+      "_name": "Stealth",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    },
+    "_survival" : {
+      "_name": "Survival",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": null
+    }
+},
   "_savingThrows": null,
   "_items": [null],
   "_defense": {

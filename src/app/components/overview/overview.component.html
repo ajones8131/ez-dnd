@@ -1,3 +1,4 @@
-{{character}}
-
-<div (click)="onClick()">Click here boi</div>
+<div *ngIf="!!character">
+  <app-list [proficiencyBonus]="character.character._proficiencyBonus" [(value)]="character.character._stats"></app-list>
+  <!--<app-list [proficiencyBonus]="character.character._proficiencyBonus" [(value)]="character.character._savingThrows"></app-list>-->
+</div>

@@ -1,9 +1,24 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {trigger, state, style, animate, transition} from '@angular/animations';
 
 @Component({
   selector: 'app-click-input',
   templateUrl: './click-edit.component.html',
-  styles: []
+  styles: [],
+  animations: [
+    trigger('editState', [
+      state('inactive', style({
+        borderColor: 'transparent',
+        transform: 'scaleX(.01)'
+      })),
+      state('active',   style({
+        borderColor: 'white',
+        transform: 'scaleX(1)'
+      })),
+      transition('inactive => active', animate('150ms ease-in')),
+      transition('active => inactive', animate('150ms ease-out'))
+    ])
+  ]
 })
 export class ClickEditComponent implements OnInit {
 
@@ -14,6 +29,7 @@ export class ClickEditComponent implements OnInit {
 
   @ViewChild('valueDiv') valueDiv: ElementRef;
   public edit = false;
+  public activeState = 'inactive';
 
   constructor() {
   }
@@ -32,11 +48,13 @@ export class ClickEditComponent implements OnInit {
       }
       this.valueDiv.nativeElement.blur();
       this.edit = false;
+      this.activeState = 'inactive';
     }
   }
 
   onFocus() {
     this.edit = true;
+    this.activeState = 'active';
     this.valueDiv.nativeElement.focus();
   }
 }
