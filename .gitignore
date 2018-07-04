@@ -10,6 +10,8 @@
 /ezDND-mas-x64
 /ezDND-win32-x64
 /src/environments
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
 
 # dependencies
 /node_modules

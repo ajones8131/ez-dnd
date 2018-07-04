@@ -9,6 +9,7 @@ import {BaseStat} from '../../../../interfaces/base-stat';
 export class BaseStatComponent implements OnInit {
 
   @Output() statChange = new EventEmitter();
+  @Output() blur = new EventEmitter();
   @Input() stat: BaseStat;
 
   constructor() {
@@ -23,8 +24,7 @@ export class BaseStatComponent implements OnInit {
 
   onBlur() {
     this.statChange.emit(this.stat);
-    console.log('emitted');
-    console.log(this.stat);
+    this.blur.emit();
   }
 
 }

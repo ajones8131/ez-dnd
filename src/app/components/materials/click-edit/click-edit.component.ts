@@ -23,6 +23,7 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
 export class ClickEditComponent implements OnInit {
 
   @Output() valueChange = new EventEmitter();
+  @Output() blur = new EventEmitter();
   @Input() value = '';
   @Input() spellCheck = 'false';
   @Input() multiline = false;
@@ -38,6 +39,7 @@ export class ClickEditComponent implements OnInit {
   }
 
   onBlur(event, newValue, enter) {
+    this.blur.emit();
     if ((enter && !this.multiline) || !enter) {
       if (enter && !this.multiline) {
         event.preventDefault();

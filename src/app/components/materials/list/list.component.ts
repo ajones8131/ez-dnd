@@ -8,6 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class ListComponent implements OnInit {
 
   @Output() valueChange = new EventEmitter();
+  @Output() blur = new EventEmitter();
   @Input() value: object = null;
   @Input() proficiencyBonus;
 

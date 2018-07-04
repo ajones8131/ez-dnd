@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {DataService} from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,12 @@ import {Component} from '@angular/core';
   styles: []
 })
 export class AppComponent {
+  isDataLoaded = false;
+  constructor(public DS: DataService) {
+    DS.character.subscribe(res => {
+      if (!!res) {
+        this.isDataLoaded = true;
+      }
+    });
+  }
 }

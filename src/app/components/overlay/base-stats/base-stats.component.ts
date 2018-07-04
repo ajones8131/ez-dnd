@@ -20,8 +20,8 @@ export class BaseStatsComponent implements OnInit {
   ngOnInit() {
   }
 
-  onChange(baseStat) {
-    console.log(this.baseStats);
+  onBlur() {
+    this.DS.setCharacter(this.character);
   }
 
 }
