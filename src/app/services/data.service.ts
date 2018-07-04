@@ -27,4 +27,11 @@ export class DataService {
   public setCharacter(characterImpl) {
     this.character.next(characterImpl);
   }
+
+  getToken() {
+    const body = new URLSearchParams();
+    body.set('grant_type', 'urn:ibm:params:oauth:grant-type:apikey');
+    body.set('api_key', 'BKw6DUScyGoJtQTnn2LVy9qBujI38W-lOArbvtDgE5T3');
+    this.http.post();
+  }
 }

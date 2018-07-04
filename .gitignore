@@ -9,6 +9,7 @@
 #production outputs
 /ezDND-mas-x64
 /ezDND-win32-x64
+/src/environments
 
 # dependencies
 /node_modules

@@ -3,13 +3,13 @@
     <ng-content></ng-content>
   </div>
   <div #valueDiv contenteditable="true"
-       class="outline-transparent ph3 dib"
+       class="outline-transparent pr3 dib"
        (focus)="onFocus()"
        (blur)="onBlur($event, valueDiv.innerText, false)"
        (keydown.enter)="onBlur($event, valueDiv.innerText, true)"
         spellcheck="false">
        <!--[ngClass]="{'b&#45;&#45;white b': edit, 'b&#45;&#45;transparent': !edit}"-->
     {{value}}
-    <div class="bb bw1" [@editState]="activeState"></div>
   </div>
+  <div class="bb bw1" [@editState]="activeState"></div>
 </div>
