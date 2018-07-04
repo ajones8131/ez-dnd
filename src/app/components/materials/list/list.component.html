@@ -1,0 +1,5 @@
+<div *ngIf="!!value">
+  <div *ngFor="let item of items">
+    <app-list-item [proficiencyBonus]="proficiencyBonus" [(value)]="value[item]"></app-list-item>
+  </div>
+</div>
