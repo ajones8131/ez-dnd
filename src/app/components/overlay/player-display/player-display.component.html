@@ -1,15 +1,23 @@
 <div *ngIf="!!character">
-  <app-click-input class="ml4 w-100 f3 flex" (blur)="onBlur()" [(value)]="character.character._displayName"></app-click-input>
-  <app-click-input class="ml4 w-100 f7 flex pv0" (blur)="onBlur()" [(value)]="character.character._name"></app-click-input>
-  <app-click-input class="ml4 w-100 f7 flex pv0" (blur)="onBlur()" [(value)]="character.character._class"></app-click-input>
-  <app-click-input class="ml4 w-100 f7 flex pv0" (blur)="onBlur()" [(value)]="character.character._race"></app-click-input>
-  <app-click-input class="ml4 w-100 f7 flex pv0" (blur)="onBlur()" [(value)]="character.character._background"></app-click-input>
-  <app-click-input class="ml4 w-100 f7 flex pv0" (blur)="onBlur()" [(value)]="character.character._alignment"></app-click-input>
+  <app-click-input class="ml4 w-100 f3 flex" (blur)="onBlur()"
+                   [(value)]="character.character._displayName"></app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pv0" (blur)="onBlur()"
+                   [(value)]="character.character._name"></app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pv0" (blur)="onBlur()"
+                   [(value)]="character.character._class"></app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pv0" (blur)="onBlur()"
+                   [(value)]="character.character._race"></app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pv0" (blur)="onBlur()"
+                   [(value)]="character.character._background"></app-click-input>
+  <app-click-input class="ml4 w-100 f7 flex pv0" (blur)="onBlur()"
+                   [(value)]="character.character._alignment"></app-click-input>
 
-  <app-click-input class="ml4 w-100 f3 flex pt3" (blur)="onBlur()" [(value)]="character.character._defense._currentHitPoints">
+  <app-click-input class="ml4 w-100 f3 flex pt3" (blur)="onBlur()"
+                   [(value)]="character.character._defense._currentHitPoints">
     HP
   </app-click-input>
-  <app-click-input class="ml4 w-100 f3 flex pt2" (blur)="onBlur()" [(value)]="character.character._attacks._spellSlots._value">
+  <app-click-input class="ml4 w-100 f3 flex pt2" (blur)="onBlur()"
+                   [(value)]="character.character._attacks._spellSlots._value">
     Spell Slots
   </app-click-input>
   <app-click-input class="ml4 w-100 f7 flex pt3" (blur)="onBlur()" [(value)]="character.character._money._cp._value">

@@ -1,5 +1,5 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
-import {trigger, state, style, animate, transition} from '@angular/animations';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-click-input',
@@ -11,7 +11,7 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
         borderColor: 'transparent',
         transform: 'scaleX(.01)'
       })),
-      state('active',   style({
+      state('active', style({
         borderColor: 'white',
         transform: 'scaleX(1)'
       })),
@@ -24,6 +24,7 @@ export class ClickEditComponent implements OnInit {
 
   @Output() valueChange = new EventEmitter();
   @Output() blur = new EventEmitter();
+  @Output() dblclick = new EventEmitter();
   @Input() value = '';
   @Input() spellCheck = 'false';
   @Input() multiline = false;
@@ -58,5 +59,13 @@ export class ClickEditComponent implements OnInit {
     this.edit = true;
     this.activeState = 'active';
     this.valueDiv.nativeElement.focus();
+  }
+
+  onDblClick() {
+    this.dblclick.emit();
+  }
+
+  innertext() {
+    return this.value;
   }
 }

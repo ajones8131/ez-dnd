@@ -26,11 +26,11 @@ export class DataService {
     console.log(newCharacter);
     console.log(environment.apiurl);
     return this.http.post(environment.apiurl, JSON.stringify(newCharacter), {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
     })
-    .subscribe(res => {
-      console.log(res);
-    });
+      .subscribe(res => {
+        console.log(res);
+      });
   }
 
   public setCharacter(characterImpl: CharacterImpl) {
@@ -43,7 +43,7 @@ export class DataService {
   getCharacters() {
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type':  'application/json',
+        'Content-Type': 'application/json',
         'Accept': 'application/json'
       })
     };

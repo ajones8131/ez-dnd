@@ -10,8 +10,7 @@ import {CharacterImpl} from '../../classes/character-impl';
 export class OverviewComponent implements OnInit {
 
   public character: CharacterImpl = null;
-  public output1;
-  public output2;
+
   constructor(public DS: DataService) {
 
   }
@@ -29,10 +28,8 @@ export class OverviewComponent implements OnInit {
     this.DS.setCharacter(this.character);
   }
 
-  doTheOtherThing() {
-    console.log(this.DS.getCharacters().subscribe(res => {
-      this.output2 = JSON.stringify(res);
-    }));
+  onBlur() {
+    this.DS.setCharacter(this.character);
   }
 
 }

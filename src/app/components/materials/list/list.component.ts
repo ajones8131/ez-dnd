@@ -10,6 +10,7 @@ export class ListComponent implements OnInit {
   @Output() valueChange = new EventEmitter();
   @Output() blur = new EventEmitter();
   @Input() value: object = null;
+  @Input() baseStats;
   @Input() proficiencyBonus;
 
   public items;
@@ -20,6 +21,11 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.items = Object.keys(this.value);
     console.log(this.items);
+  }
+
+  onBlur() {
+    console.log(this.value);
+    this.valueChange.emit(this.value);
   }
 
 }

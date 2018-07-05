@@ -1,5 +1,13 @@
 <div *ngIf="!!value">
-  <div *ngFor="let item of items">
-    <app-list-item [proficiencyBonus]="proficiencyBonus" [(value)]="value[item]"></app-list-item>
-  </div>
+  <table class="f6 w-100 center" cellspacing="0">
+    <tbody class="lh-copy">
+    <tr class="stripe-light" *ngFor="let item of items">
+      <app-list-item [proficiencyBonus]="proficiencyBonus"
+                     [baseStats]="baseStats"
+                     [(value)]="value[item]"
+                     (blur)="onBlur()">
+      </app-list-item>
+    </tr>
+    </tbody>
+  </table>
 </div>

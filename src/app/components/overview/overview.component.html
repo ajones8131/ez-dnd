@@ -1,4 +1,12 @@
-<div *ngIf="!!character">
-  <app-list [proficiencyBonus]="character.character._proficiencyBonus" [(value)]="character.character._stats"></app-list>
-  <!--<app-list [proficiencyBonus]="character.character._proficiencyBonus" [(value)]="character.character._savingThrows"></app-list>-->
+<div *ngIf="!!character" class="center">
+  <app-list class="w-30 pr3 dib v-top"
+            [proficiencyBonus]="character.character._proficiencyBonus"
+            [baseStats]="character.character._baseStats"
+            [(value)]="character.character._stats"
+            (blur)="onBlur()"></app-list>
+  <app-list class="w-30 pl3 dib v-top"
+            [proficiencyBonus]="character.character._proficiencyBonus"
+            [baseStats]="character.character._baseStats"
+            [(value)]="character.character._savingThrows"
+            (blur)="onBlur()"></app-list>
 </div>

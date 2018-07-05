@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {MatIconModule} from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppComponent} from './app.component';
 import {OverviewComponent} from './components/overview/overview.component';
@@ -18,8 +18,8 @@ import {ClickEditComponent} from './components/materials/click-edit/click-edit.c
 import {FormsModule} from '@angular/forms';
 import {BaseStatsComponent} from './components/overlay/base-stats/base-stats.component';
 import {BaseStatComponent} from './components/overlay/base-stats/base-stat/base-stat.component';
-import { ListComponent } from './components/materials/list/list.component';
-import { ListItemComponent } from './components/materials/list/list-item/list-item.component';
+import {ListComponent} from './components/materials/list/list.component';
+import {ListItemComponent} from './components/materials/list/list-item/list-item.component';
 
 @NgModule({
   declarations: [

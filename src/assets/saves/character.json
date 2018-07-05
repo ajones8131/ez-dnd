@@ -49,135 +49,180 @@
     }
   },
   "_stats": {
-    "_acrobatics" : {
+    "_acrobatics": {
       "_name": "Acrobatics",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_dex"
     },
-    "_animalHandling" : {
-        "_name": "Animal Handling",
-        "_value": 0,
-        "_proficiency": false,
-        "_customModifier": 0,
-        "_baseStat": null
+    "_animalHandling": {
+      "_name": "Animal Handling",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": "_wis"
     },
-    "_arcana" : {
-        "_name": "Arcana",
-        "_value": 0,
-        "_proficiency": false,
-        "_customModifier": 0,
-        "_baseStat": null
+    "_arcana": {
+      "_name": "Arcana",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": "_int"
     },
-    "_athletics" : {
+    "_athletics": {
       "_name": "Athletics",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_str"
     },
-    "_deception" : {
+    "_deception": {
       "_name": "Deception",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_cha"
     },
-    "_history" : {
+    "_history": {
       "_name": "History",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_int"
     },
-      "_insight" : {
+    "_insight": {
       "_name": "Insight",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_wis"
     },
-    "_intimidation" : {
+    "_intimidation": {
       "_name": "Intimidation",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_cha"
     },
-    "_investigation" : {
+    "_investigation": {
       "_name": "Investigation",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_int"
     },
-    "_medicine" : {
+    "_medicine": {
       "_name": "Medicine",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_wis"
     },
-    "_nature" : {
+    "_nature": {
       "_name": "Nature",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_int"
     },
-    "_perception" : {
+    "_perception": {
       "_name": "Perception",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_wis"
     },
-    "_performance" : {
+    "_performance": {
       "_name": "Performance",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_cha"
     },
-    "_persuasion" : {
+    "_persuasion": {
       "_name": "Persuasion",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_cha"
     },
-    "_religion" : {
+    "_religion": {
       "_name": "Religion",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_int"
     },
-    "_sleightOfHand" : {
+    "_sleightOfHand": {
       "_name": "Sleight Of Hand",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_dex"
     },
-    "_stealth" : {
+    "_stealth": {
       "_name": "Stealth",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_dex"
     },
-    "_survival" : {
+    "_survival": {
       "_name": "Survival",
       "_value": 0,
       "_proficiency": false,
       "_customModifier": 0,
-      "_baseStat": null
+      "_baseStat": "_wis"
     }
-},
-  "_savingThrows": null,
-  "_items": [null],
+  },
+  "_savingThrows": {
+    "_str": {
+      "_name": "Dexterity",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": "_str"
+    },
+    "_dex": {
+      "_name": "Dexterity",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": "_dex"
+    },
+    "_const": {
+      "_name": "Constitution",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": "_const"
+    },
+    "_int": {
+      "_name": "Intelligence",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": "_int"
+    },
+    "_wis": {
+      "_name": "Wisdom",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": "_wis"
+    },
+    "_cha": {
+      "_name": "Charisma",
+      "_value": 0,
+      "_proficiency": false,
+      "_customModifier": 0,
+      "_baseStat": "_cha"
+    }
+  },
+  "_items": [
+    null
+  ],
   "_defense": {
     "_armorClass": 15,
     "_maximumHitPoints": 30,

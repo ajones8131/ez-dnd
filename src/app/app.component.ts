@@ -8,6 +8,7 @@ import {DataService} from './services/data.service';
 })
 export class AppComponent {
   isDataLoaded = false;
+
   constructor(public DS: DataService) {
     DS.character.subscribe(res => {
       if (!!res) {

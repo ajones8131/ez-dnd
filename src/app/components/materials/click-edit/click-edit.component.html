@@ -1,14 +1,15 @@
-<div class="bg-transparent text-primary">
+<div class="bg-transparent">
   <div class="dib">
     <ng-content></ng-content>
   </div>
   <div #valueDiv contenteditable="true"
        class="outline-transparent pr3 dib"
+       (dblclick)="onDblClick()"
        (focus)="onFocus()"
        (blur)="onBlur($event, valueDiv.innerText, false)"
        (keydown.enter)="onBlur($event, valueDiv.innerText, true)"
-        spellcheck="false">
-       <!--[ngClass]="{'b&#45;&#45;white b': edit, 'b&#45;&#45;transparent': !edit}"-->
+       spellcheck="false">
+    <!--[ngClass]="{'b&#45;&#45;white b': edit, 'b&#45;&#45;transparent': !edit}"-->
     {{value}}
   </div>
   <div class="bb bw1" [@editState]="activeState"></div>

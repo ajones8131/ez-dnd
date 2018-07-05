@@ -22,7 +22,6 @@ export class PlayerDisplayComponent implements OnInit {
   }
 
   onBlur() {
-    console.log('blurring');
     this.DS.setCharacter(this.character);
   }
 

@@ -11,18 +11,50 @@ export class ListItemComponent implements OnInit {
   @Output() blur = new EventEmitter();
   @Input() value;
   @Input() proficiencyBonus;
+  @Input() baseStats;
+
+  public finalValue;
 
   constructor() {
   }
 
   ngOnInit() {
+    console.log(this.baseStats);
   }
 
   calculateValue() {
-    let res = Number.parseInt(this.value._value);
-    if (this.value._proficiency === 'true') {
-      res += Number.parseInt(this.proficiencyBonus);
+    let ret = Number.parseInt(this.value._value) + Number.parseInt(this.baseStats[this.value._baseStat]._modifier);
+    if (this.hasProficiency()) {
+      ret += Number.parseInt(this.proficiencyBonus);
     }
+    return ret;
+  }
+
+  onBlur(value) {
+    this.value._value = Number.parseInt(value) - Number.parseInt(this.baseStats[this.value._baseStat]._modifier);
+    if (this.hasProficiency()) {
+      this.value._value -= Number.parseInt(this.proficiencyBonus);
+    }
+    this.onValueChange();
+  }
+
+  onValueChange() {
+    this.blur.emit();
+    console.log('onValueChange');
+    console.log(this.value);
+    this.valueChange.emit(this.value);
+  }
+
+  setProficiency() {
+    this.value._proficiency = true;
+  }
+
+  removeProficiency() {
+    this.value._proficiency = false;
+  }
+
+  hasProficiency() {
+    return this.value._proficiency === true;
   }
 
 }
