@@ -46,11 +46,7 @@ export class ListItemComponent implements OnInit {
   }
 
   setProficiency() {
-    this.value._proficiency = true;
-  }
-
-  removeProficiency() {
-    this.value._proficiency = false;
+    this.value._proficiency = !this.hasProficiency();
   }
 
   hasProficiency() {
