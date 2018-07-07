@@ -1,0 +1,21 @@
+<div class="vh-100 w-100">
+  <div class="center v-mid tc mt4">
+    <div class="f1 i">Who is you!</div>
+    <div class="mv3" *ngFor="let character of characters">
+      <mat-card (click)="loadCharacter(character)" class="w-20 tc center bg-primary-dark text-primary grow">
+          {{character}}
+      </mat-card>
+    </div>
+    <div class="mv3">
+      <mat-card *ngIf="!clicked" (click)="setClicked()" class="w-20 tc center bg-primary-dark text-primary grow">
+        New Character
+      </mat-card>
+      <div *ngIf="clicked" class="w-30 tl ph3 pv2 center bg-primary-dark text-primary shadow-1">
+        <app-click-input #characterName [(value)]="newCharacter" (blur)="removeClicked(characterName.innertext())">Character Name: </app-click-input>
+        <button class="pv2 mv2 tc bg-primary-light w-100 center" (click)="loadCharacter('character', true)">Good Enough</button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
