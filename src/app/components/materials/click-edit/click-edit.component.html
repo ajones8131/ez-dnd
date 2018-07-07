@@ -5,8 +5,8 @@
   <div #valueDiv contenteditable="true"
        class="outline-transparent pr3 dib"
        (dblclick)="onDblClick()"
-       (blur)="onBlur($event, valueDiv.innerText, false)"
-       (keydown.enter)="onBlur($event, valueDiv.innerText, true)"
+       (blur)="onBlur($event, valueDiv.innerText)"
+       (keydown.enter)="onEnter($event)"
        spellcheck="false">
     <!--[ngClass]="{'b&#45;&#45;white b': edit, 'b&#45;&#45;transparent': !edit}"-->
     {{value}}

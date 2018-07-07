@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {OverviewComponent} from './components/overview/overview.component';
 import {AttackViewComponent} from './components/attack-view/attack-view.component';
-import {AttributesComponent} from './components/attributes/attributes.component';
+import {InventoryComponent} from './components/inventory/inventory.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -16,11 +16,11 @@ const routes: Routes = [
   },
   {
     path: 'inventory',
-    component: AttributesComponent
+    component: InventoryComponent
   },
   {
     path: 'misc',
-    component: AttributesComponent
+    component: InventoryComponent
   },
   {path: '**', redirectTo: '/home'}
 ];

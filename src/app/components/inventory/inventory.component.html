@@ -1,0 +1,13 @@
+<div *ngIf="!!character">
+  <div class="w-50 center ph4 pv2">
+    <app-click-input #newItemInput [value]="newItem" (valueChange)="onChange($event)" (enter)="createItem(newItemInput.innertext())">New Item: </app-click-input>
+  </div>
+  <table class="center w-50">
+    <tr class="pv2 ph4 stripe-light" *ngFor="let item of character.character._items; let i = index">
+        <td><app-click-input class="mh0" [(value)]="item._name"></app-click-input></td>
+        <td><app-click-input class="mh0" [(value)]="item._value"></app-click-input></td>
+        <td><app-click-input class="mh0" [(value)]="item._description"></app-click-input></td>
+        <td><button class="outline-transparent bn ph3 text-primary grow bg-primary-light mh0 fr" (click)="deleteItem(item, i)">Delete</button></td>
+    </tr>
+  </table>
+</div>

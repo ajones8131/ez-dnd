@@ -9,7 +9,7 @@ import {OverlayComponent} from './components/overlay/overlay.component';
 import {PlayerDisplayComponent} from './components/overlay/player-display/player-display.component';
 import {NavbarComponent} from './components/overlay/navbar/navbar.component';
 import {AttackViewComponent} from './components/attack-view/attack-view.component';
-import {AttributesComponent} from './components/attributes/attributes.component';
+import {InventoryComponent} from './components/inventory/inventory.component';
 import {SettingsComponent} from './components/settings/settings.component';
 import {AppRoutingModule} from './app-routing.module';
 import {DataService} from './services/data.service';
@@ -30,7 +30,7 @@ import { CharacterSelectorComponent } from './components/character-selector/char
     PlayerDisplayComponent,
     NavbarComponent,
     AttackViewComponent,
-    AttributesComponent,
+    InventoryComponent,
     SettingsComponent,
     ClickEditComponent,
     BaseStatsComponent,
