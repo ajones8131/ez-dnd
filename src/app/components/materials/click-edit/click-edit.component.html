@@ -7,9 +7,8 @@
        (dblclick)="onDblClick()"
        (blur)="onBlur($event, valueDiv.innerText)"
        (keydown.enter)="onEnter($event)"
-       spellcheck="false">
-    <!--[ngClass]="{'b&#45;&#45;white b': edit, 'b&#45;&#45;transparent': !edit}"-->
-    {{value}}
+       spellcheck="false"
+      [textContent]="value">
   </div>
   <div class="bb bw1" [@editState]="activeState"></div>
 </div>

@@ -31,13 +31,19 @@ export class InventoryComponent implements OnInit {
     if (!this.newItem || this.newItem === '') {
       return;
     }
-    this.character.character._items.push({
+    this.character.character._items.unshift({
       _name: this.newItem.trim(),
       _value: 0,
-      _description: 'Add a Description'
+      _description: ''
     });
     this.DS.setCharacter(this.character);
+    this.newItemInput.clearValue();
+    this.newItemInput.clearValue();
     this.newItem = '';
+  }
+
+  saveItem() {
+    this.DS.setCharacter(this.character);
   }
 
   deleteItem(item, index) {

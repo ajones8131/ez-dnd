@@ -43,12 +43,18 @@ export class ClickEditComponent implements OnInit {
   onEnter(event) {
     if (!this.multiline) {
       event.preventDefault();
+      this.valueDiv.nativeElement.blur();
+      this.enter.emit();
     }
-    this.valueDiv.nativeElement.blur();
-    this.enter.emit();
   }
 
   onBlur(event, newValue) {
+    // this.valueDiv.nativeElement.innerText = '';
+    this.value = newValue;
+    console.log(event);
+    console.log(this.value);
+    console.log(newValue);
+    newValue = newValue.trim();
     this.valueChange.emit(newValue);
     this.blur.emit();
     this.edit = false;
