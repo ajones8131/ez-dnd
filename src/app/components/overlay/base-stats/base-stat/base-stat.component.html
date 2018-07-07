@@ -1,4 +1,3 @@
-
-<app-click-input [(value)]="stat._value"></app-click-input>
-<app-click-input [(value)]="stat._name"></app-click-input>
-<app-click-input [(value)]="stat._modifier"></app-click-input>
+<app-click-input (blur)="onBlur()" [(value)]="stat._value"></app-click-input>
+<app-click-input (blur)="onBlur()" [(value)]="stat._name"></app-click-input>
+<app-click-input (blur)="onBlur()" [(value)]="stat._modifier"></app-click-input>

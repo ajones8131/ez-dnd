@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ClickEditComponent } from './click-edit.component';
+import {ClickEditComponent} from './click-edit.component';
 
 describe('ClickEditComponent', () => {
   let component: ClickEditComponent;
@@ -8,9 +8,9 @@ describe('ClickEditComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ClickEditComponent ]
+      declarations: [ClickEditComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

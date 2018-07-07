@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DataService} from '../../services/data.service';
 import {CharacterImpl} from '../../classes/character-impl';
 
@@ -7,11 +7,15 @@ import {CharacterImpl} from '../../classes/character-impl';
   templateUrl: './overview.component.html',
   styles: []
 })
-export class OverviewComponent implements OnInit, OnDestroy {
+export class OverviewComponent implements OnInit {
 
   public character: CharacterImpl = null;
 
   constructor(public DS: DataService) {
+
+  }
+
+  ngOnInit() {
     this.DS.character.subscribe(character => {
       this.character = character;
       console.log('Overview Subscription Value:');
@@ -19,17 +23,13 @@ export class OverviewComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnInit() {
-
-  }
-
-  ngOnDestroy() {
-    this.DS.character.unsubscribe();
-  }
-
   onClick() {
     this.character.character._level += 1;
-    this.DS.postJSON(this.character.character);
+    this.DS.setCharacter(this.character);
+  }
+
+  onBlur() {
+    this.DS.setCharacter(this.character);
   }
 
 }

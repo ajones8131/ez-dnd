@@ -1,18 +1,18 @@
 <div class="dib" *ngIf="!!character">
   <div *ngFor="let stat of baseStats"
        class="dib tc ph3">
-    <app-base-stat [(stat)]="character.character._baseStats[stat]"></app-base-stat>
+    <app-base-stat (blur)="onBlur()" [(stat)]="character.character._baseStats[stat]"></app-base-stat>
   </div>
 </div>
 
-<div class="dib fr mr5 tr">
-  <app-click-input [(value)]="character.character._proficiencyBonus">
+<div class="dib fr mr5 tr" *ngIf="!!character">
+  <app-click-input (blur)="onBlur()" [(value)]="character.character._proficiencyBonus">
     <div>Proficiency Bonus</div>
   </app-click-input>
-  <app-click-input [(value)]="character.character._passiveWisdom">
+  <app-click-input (blur)="onBlur()" [(value)]="character.character._passiveWisdom">
     <div>Passive Wisdom</div>
   </app-click-input>
-  <app-click-input [(value)]="character.character._inspiration">
+  <app-click-input (blur)="onBlur()" [(value)]="character.character._inspiration">
     <div>Inspiration</div>
   </app-click-input>
 </div>

@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DataService} from '../../../services/data.service';
 import {CharacterImpl} from '../../../classes/character-impl';
 
@@ -7,21 +7,22 @@ import {CharacterImpl} from '../../../classes/character-impl';
   templateUrl: './player-display.component.html',
   styles: []
 })
-export class PlayerDisplayComponent implements OnInit, OnDestroy {
+export class PlayerDisplayComponent implements OnInit {
 
   public character: CharacterImpl = null;
 
   constructor(public DS: DataService) {
-    DS.character.subscribe(character => {
+
+  }
+
+  ngOnInit() {
+    this.DS.character.subscribe(character => {
       this.character = character;
     });
   }
 
-  ngOnInit() {
-  }
-
-  ngOnDestroy() {
-    this.DS.character.unsubscribe();
+  onBlur() {
+    this.DS.setCharacter(this.character);
   }
 
 }

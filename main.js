@@ -8,8 +8,7 @@ function createWindow () {
     width: 1024,
     height: 800,
     backgroundColor: '#ffffff',
-    icon: `file://${__dirname}/dist/favicon.ico`,
-    titleBarStyle: 'hiddenInset'
+    icon: `file://${__dirname}/dist/favicon.ico`
   });
 
 
@@ -42,3 +41,6 @@ app.on('activate', function () {
     createWindow();
   }
 });
+
+app.commandLine.appendSwitch('remote-debugging-port', '8315');
+app.commandLine.appendSwitch('host-rules', 'MAP * 127.0.0.1');

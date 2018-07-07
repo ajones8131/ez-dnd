@@ -1,5 +1,5 @@
 import {BaseStat} from './base-stat';
-import {ChaStat, ConstStat, DexStat, IntStat, StrStat, WisStat} from './stat';
+import {Stat} from './stat';
 import {MeleeAttack, SpellAttack} from './attack';
 import {Metadata} from './metadata';
 import {Item} from './item';
@@ -62,32 +62,32 @@ export interface Character extends Metadata {
   };
 
   _savingThrows: {
-    _str: StrStat;
-    _dex: DexStat;
-    _const: ConstStat;
-    _int: IntStat;
-    _wis: WisStat;
-    _cha: ChaStat;
+    _str: Stat;
+    _dex: Stat;
+    _const: Stat;
+    _int: Stat;
+    _wis: Stat;
+    _cha: Stat;
   };
 
   _stats: {
-    _acrobatics: DexStat;
-    _animalHandling: WisStat;
-    _arcana: IntStat;
-    _athletics: StrStat;
-    _deception: ChaStat;
-    _history: IntStat;
-    _insight: WisStat;
-    _intimidation: ChaStat;
-    _investigation: IntStat;
-    _medicine: WisStat;
-    _nature: IntStat;
-    _perception: WisStat;
-    _performance: ChaStat;
-    _persuasion: ChaStat;
-    _religion: IntStat;
-    _sleightOfHand: DexStat;
-    _stealth: DexStat;
-    _survival: WisStat;
+    _acrobatics: Stat;
+    _animalHandling: Stat;
+    _arcana: Stat;
+    _athletics: Stat;
+    _deception: Stat;
+    _history: Stat;
+    _insight: Stat;
+    _intimidation: Stat;
+    _investigation: Stat;
+    _medicine: Stat;
+    _nature: Stat;
+    _perception: Stat;
+    _performance: Stat;
+    _persuasion: Stat;
+    _religion: Stat;
+    _sleightOfHand: Stat;
+    _stealth: Stat;
+    _survival: Stat;
   };
 }

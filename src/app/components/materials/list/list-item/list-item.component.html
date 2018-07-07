@@ -1,0 +1,8 @@
+<div [ngClass]="{'f6 text-primary b': hasProficiency(), 'f7 text-detail': !hasProficiency()}">
+  <app-click-input [value]="calculateValue()"
+                   (valueChange)="onBlur(valueInput.innertext())"
+                   (blur)="onBlur(valueInput.innertext())"
+                   (dblclick)="setProficiency()" #valueInput>
+    <span class="pr3">{{value._name}}</span>
+  </app-click-input>
+</div>
