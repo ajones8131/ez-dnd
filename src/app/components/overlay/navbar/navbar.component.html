@@ -32,8 +32,8 @@
       </li>
       <li class="list di"><a class="pt1 text-secondary no-underline mh3 fl"
                              routerLinkActive="b text-primary bb bw1 b--white-70" [routerLink]="['/misc']">Misc</a></li>
-      <li class="list di"><a class="pt1 text-secondary no-underline mh3 fr">
-        <mat-icon>settings</mat-icon>
+      <li class="list di" (click)="clearCharacter()"><a class="pt1 text-secondary no-underline mh3 fr">
+        logout
       </a></li>
     </ul>
   </div>

@@ -13,13 +13,10 @@ export class ListItemComponent implements OnInit {
   @Input() proficiencyBonus;
   @Input() baseStats;
 
-  public finalValue;
-
   constructor() {
   }
 
   ngOnInit() {
-    console.log(this.baseStats);
   }
 
   calculateValue() {
@@ -40,8 +37,6 @@ export class ListItemComponent implements OnInit {
 
   onValueChange() {
     this.blur.emit();
-    console.log('onValueChange');
-    console.log(this.value);
     this.valueChange.emit(this.value);
   }
 

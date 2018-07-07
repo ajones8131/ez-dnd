@@ -1,3 +1,7 @@
 <div *ngIf="isDataLoaded" class="text-primary">
   <app-overlay></app-overlay>
 </div>
+
+<div *ngIf="!isDataLoaded" class="text-primary">
+  <app-character-selector></app-character-selector>
+</div>

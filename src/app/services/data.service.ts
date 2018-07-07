@@ -12,12 +12,12 @@ export class DataService {
   public character: Subject<CharacterImpl> = new BehaviorSubject<CharacterImpl>(null);
 
   constructor(private http: HttpClient) {
-    this.getJSON('character').subscribe(data => {
-      this.character.next(new CharacterImpl(data));
-    });
+    // this.getJSON('character').subscribe(data => {
+    //   this.character.next(new CharacterImpl(data));
+    // });
   }
 
-  public getJSON(character): Observable<any> {
+  public getCharacter(character): Observable<any> {
     return this.http.get(`${environment.apiurl}/${character}.json`);
   }
 
@@ -34,7 +34,7 @@ export class DataService {
   }
 
   public setCharacter(characterImpl: CharacterImpl) {
-    if (!!characterImpl.character._displayName && characterImpl.character._displayName !== '') {
+    if (!!characterImpl && !!characterImpl.character._displayName && characterImpl.character._displayName !== '') {
       this.postJSON(characterImpl.character);
     }
     this.character.next(characterImpl);

@@ -11,8 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "ng build && electron .",
-    "electron-build": "ng build --prod && electron .",
-    "electron-package": "ng build --prod && electron-packager . ezDND --platform=mas,win32 --arch=x64"
+    "electron:build": "ng build --prod && electron .",
+    "electron:package": "ng build --prod && electron-packager . ezDND --platform=mas,win32 --arch=x64"
   },
   "private": true,
   "dependencies": {

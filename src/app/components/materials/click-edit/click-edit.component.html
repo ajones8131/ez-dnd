@@ -1,11 +1,10 @@
-<div class="bg-transparent">
+<div class="bg-transparent" (click)="onFocus()">
   <div class="dib">
     <ng-content></ng-content>
   </div>
   <div #valueDiv contenteditable="true"
        class="outline-transparent pr3 dib"
        (dblclick)="onDblClick()"
-       (focus)="onFocus()"
        (blur)="onBlur($event, valueDiv.innerText, false)"
        (keydown.enter)="onBlur($event, valueDiv.innerText, true)"
        spellcheck="false">
